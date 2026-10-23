@@ -10,7 +10,14 @@
 :root{--g:#123b2e;--gold:#c9a45c;--cream:#f7f4ec;--ink:#202820;--muted:#687269;--line:#e4e0d5}
 *{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:18px/1.7 Georgia,"Times New Roman",serif}
 .wrap{width:min(1100px,92%);margin:auto}header,.hero{background:var(--g);color:#fff}.mast{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0}
-.brand{font:800 1.5rem Arial,sans-serif;letter-spacing:.08em;color:#fff;text-decoration:none}.brand span,.eyebrow{color:var(--gold)}
+.brand{font:800 1.5rem Arial,sans-serif;...
+.brand .site-logo {
+  display: block;
+  width: 150px;
+  height: auto;
+  max-height: 90px;
+  object-fit: contain;
+}
 nav{display:flex;gap:18px;flex-wrap:wrap;font:600 .9rem Arial,sans-serif}nav a{color:#fff;text-decoration:none}
 .hero{padding:45px 0}.eyebrow{font:700 .75rem Arial,sans-serif;letter-spacing:.15em;text-transform:uppercase}
 h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.1;max-width:900px;margin:16px 0}.dek{font-size:1.15rem;max-width:780px;color:#e2e9e2}
@@ -30,7 +37,9 @@ button,.button{border:1px solid var(--gold);background:var(--gold);color:#17291f
 </style>
 </head>
 <body>
-<header><div class="wrap mast"><a class="brand" href="/">KOUASSI <span>H.</span></a><nav aria-label="Navigation"><a href="/">Accueil</a><a href="/#articles">Articles</a><a href="/#sport">Sport</a><a href="/#apropos">À propos</a></nav></div></header>
+<header><div class="wrap mast"><a class="brand" href="/" aria-label="Kouassi H. — Accueil">
+  <img src="/images/logo-kouassi-h.png" alt="Kouassi H. — Les talents ont une histoire." class="site-logo">
+</a><nav aria-label="Navigation"><a href="/">Accueil</a><a href="/#articles">Articles</a><a href="/#sport">Sport</a><a href="/#apropos">À propos</a></nav></div></header>
 {{ content | safe }}
 <footer><div class="wrap">© {{ "now" | dateFr }} Kouassi H. — Tous droits réservés. · <a href="/">Retour à l’accueil</a></div></footer>
 </body></html>
