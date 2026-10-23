@@ -5,7 +5,7 @@ date: 2026-10-25
 category: Économie & Société
 author: Kouassi H.
 excerpt: "Un téléphone, des photos, des statuts et une connexion Internet : le
-  commerce peut commencer sans local physique. TEST"
+  commerce peut commencer sans local physique."
 image: /images/WhatsApp, le marché des entrepreneurs togolais.png
 published: true
 ---
