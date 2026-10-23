@@ -6,6 +6,7 @@ category: Sport
 author: Kouassi H.
 excerpt: "Bronze en 2024, argent en 2026 : retour sur le parcours des Éperviers
   et les perspectives du maracana togolais."
+image: /images/Les Éperviers, du bronze à l’argent-1.png
 published: true
 ---
 ## Une finale mondiale, un nouveau cap pour le Togo
