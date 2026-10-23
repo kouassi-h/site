@@ -1,6 +1,6 @@
 ---
 title: WhatsApp est-il devenu le nouveau marché des entrepreneurs togolais ?
-slug: whatsapp-togo
+slug: whatsapp-le-nouveau-marche-togo
 date: 2026-10-25
 category: Économie & Société
 author: Kouassi H.
