@@ -6,7 +6,7 @@ category: Économie & Société
 author: Kouassi H.
 excerpt: Culture Numérique
 image: /images/WhatsApp, le marché des entrepreneurs togolais.png
-published: false
+published: true
 ---
 Au Togo, vendre ne nécessite plus toujours une boutique physique, une enseigne ou un local commercial. Un smartphone, quelques photos de produits et une connexion Internet peuvent suffire pour démarrer une activité. Au cœur de cette transformation, WhatsApp s'impose comme un outil de vente, de prospection et de fidélisation pour de nombreux entrepreneurs. Mais cette nouvelle vitrine numérique peut-elle réellement remplacer le commerce traditionnel ?  
 
