@@ -1,14 +1,13 @@
 ---
-title: "Les Éperviers maracaniers, de la troisième place à l’argent mondial"
-slug: "eperviers-maracaniers"
+title: Les Éperviers maracaniers, de la troisième place à l’argent mondial
+slug: eperviers-maracaniers
 date: 2026-10-23
-category: "Sport"
-author: "Kouassi H."
-excerpt: "Bronze en 2024, argent en 2026 : retour sur le parcours des Éperviers et les perspectives du maracana togolais."
-image: ""
+category: Sport
+author: Kouassi H.
+excerpt: "Bronze en 2024, argent en 2026 : retour sur le parcours des Éperviers
+  et les perspectives du maracana togolais."
 published: true
 ---
-
 ## Une finale mondiale, un nouveau cap pour le Togo
 
 Ils étaient venus au Cameroun avec une ambition claire : aller plus loin qu’en 2024. Ils ont finalement fait mieux.
