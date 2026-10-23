@@ -1,0 +1,41 @@
+---
+layout: layouts/base.njk
+title: Accueil
+permalink: /index.html
+description: "Kouassi H. — regards journalistiques sur le sport, la culture et la société."
+---
+<section class="hero"><div class="wrap">
+  <div class="eyebrow">Le regard de Kouassi H.</div>
+  <h1>Comprendre l’actualité. Raconter les parcours. Éclairer les enjeux.</h1>
+  <p class="dek">Des récits, des analyses et des regards sur le sport, la culture et la société, avec une plume indépendante et attentive aux faits.</p>
+  <div class="actions"><a class="button" href="#articles">Explorer les articles →</a></div>
+</div></section>
+<main class="wrap">
+  <section id="articles">
+    <div class="eyebrow">La rédaction</div><h2>Dernières publications</h2>
+    <div class="tools">
+      <input id="search" type="search" placeholder="Rechercher un article…" aria-label="Rechercher un article">
+      <select id="category" aria-label="Filtrer par rubrique"><option value="all">Toutes les rubriques</option><option value="sport">Sport</option><option value="culture">Culture</option><option value="societe">Société</option></select>
+    </div>
+    <div class="grid" id="articleGrid">
+    {% for post in collections.posts | reverse %}
+      {% if post.data.published %}
+      <article class="card" data-category="{{ post.data.category | lower }}" data-title="{{ post.data.title | lower }}">
+        <div class="card-body"><div class="category">{{ post.data.category }}{% if post.data.date %} · {{ post.data.date | dateFr }}{% endif %}</div>
+          <h2>{{ post.data.title }}</h2><p>{{ post.data.excerpt }}</p></div>
+        <div class="card-foot"><span>{{ post.data.author or "Kouassi H." }}</span><a href="{{ post.url }}">Lire l’article ↗</a></div>
+      </article>
+      {% endif %}
+    {% endfor %}
+    </div>
+    <p id="empty" style="display:none;background:#fff;padding:20px">Aucun article ne correspond à cette recherche.</p>
+  </section>
+</main>
+<section class="about" id="apropos"><div class="wrap"><div class="eyebrow">À propos</div><h2>Une plume, un regard, des histoires.</h2>
+<p>Kouassi H. propose des contenus journalistiques et des analyses autour des sujets qui marquent le sport, la culture et la société.</p>
+<p><strong>Ligne éditoriale :</strong> clarté, sobriété et respect des faits. Chaque publication vise à informer, contextualiser et ouvrir la réflexion.</p></div></section>
+<script>
+const s=document.getElementById('search'),c=document.getElementById('category'),cards=[...document.querySelectorAll('.card')],e=document.getElementById('empty');
+function filter(){let q=s.value.toLocaleLowerCase('fr').trim(),cat=c.value,k=0;cards.forEach(x=>{let ok=x.innerText.toLocaleLowerCase('fr').includes(q)&&(cat==='all'||x.dataset.category===cat);x.style.display=ok?'flex':'none';if(ok)k++});e.style.display=k?'none':'block'}
+s.addEventListener('input',filter);c.addEventListener('change',filter);
+</script>

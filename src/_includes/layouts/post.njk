@@ -1,0 +1,33 @@
+---
+layout: layouts/base.njk
+---
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">{{ category or "Actualité" }}</div>
+    <h1>{{ title }}</h1>
+    <p class="dek">{{ excerpt }}</p>
+    <div class="meta">Par <strong>{{ author or "Kouassi H." }}</strong>{% if date %} · {{ date | dateFr }}{% endif %}</div>
+    <div class="actions">
+      <button onclick="shareArticle()">Partager l’article</button>
+      <button onclick="window.print()">Imprimer / enregistrer en PDF</button>
+      <a class="button secondary" href="/#articles">← Tous les articles</a>
+    </div>
+  </div>
+</section>
+<main class="wrap">
+  <article class="story">
+    {% if image %}<p><img src="{{ image }}" alt="" style="width:100%;height:auto"></p>{% endif %}
+    <p class="lead">{{ excerpt }}</p>
+    {{ content | safe }}
+    <p><strong><em>{{ author or "Kouassi H." }}</em></strong></p>
+    <button onclick="shareArticle()">Partager cet article</button>
+  </article>
+</main>
+<script>
+function shareArticle(){
+ const data={title:document.title,text:"À lire sur Kouassi H.",url:location.href};
+ if(navigator.share){navigator.share(data).catch(()=>{});}
+ else if(navigator.clipboard&&isSecureContext){navigator.clipboard.writeText(location.href).then(()=>alert("Lien copié !")).catch(()=>alert("Copiez le lien depuis la barre du navigateur."));}
+ else {alert("Copiez le lien depuis la barre du navigateur.");}
+}
+</script>

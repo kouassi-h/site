@@ -1,0 +1,13 @@
+{
+  "name": "kouassih-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site éditorial Kouassi H.",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2"
+  }
+}
